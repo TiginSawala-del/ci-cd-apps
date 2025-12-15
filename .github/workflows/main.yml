@@ -2,7 +2,7 @@ name: Deploy CI/CD Apps
 on:
   push:
     branches:
-      - main
+      - staging
 env:
   IMAGE_NAME: ci-cd-apps
   GHCR_REGISTRY: ghcr.io
