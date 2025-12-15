@@ -6,7 +6,7 @@ on:
 env:
   IMAGE_NAME: ci-cd-apps
   GHCR_REGISTRY: ghcr.io
-  STACK_STAGING: ci-cd-app
+  STACK_STAGING: ci-cd-apps
   IMAGE_TAG: latest
 
 jobs:
