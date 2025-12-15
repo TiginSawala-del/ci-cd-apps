@@ -2,7 +2,7 @@ name: Deploy CI/CD Apps
 on:
   push:
     branches:
-      - staging
+      - main
 env:
   IMAGE_NAME: ci-cd-apps
   GHCR_REGISTRY: ghcr.io
@@ -41,8 +41,7 @@ jobs:
       
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ env.GHCR_REGISTRY }}/${{ env.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
-            --build-arg ENV_BASE64="${{ secrets.ENV_BASE64 }}" .
+          docker build -t ${{ env.GHCR_REGISTRY }}/${{ env.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
           docker push ${{ env.GHCR_REGISTRY }}/${{ env.REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
   
   deploy:
