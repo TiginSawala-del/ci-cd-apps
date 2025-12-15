@@ -11,7 +11,7 @@ env:
  GHCR_PAT: ${{ secrets.GHCR_PAT }}
  DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
  API_TOKEN: ${{ secrets.API_TOKEN }}
- STACK_STAGING: staging-app
+ STACK_STAGING: ci-cd-app
  IMAGE_TAG: latest
 
 
